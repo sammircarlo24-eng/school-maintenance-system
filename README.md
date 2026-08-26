@@ -1,1 +1,0 @@
-# school-maintenance-system
