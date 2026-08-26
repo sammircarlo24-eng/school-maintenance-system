@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AITE Admin Login</title>
+
+    <link rel="stylesheet" href="admin-login.css">
+    <link rel="icon" type="image/x-icon" href="LOLOGO.png">
+</head>
+
+<body class="admin-body">
+
+    <div class="admin-page">
+
+        <div class="admin-box">
+
+            <div class="admin-logo">
+                <img src="LOLOGO.png" alt="AITE Logo">
+            </div>
+
+            <h1 class="admin-title">AITE</h1>
+
+            <h2 class="admin-subtitle">
+                Administrator Login
+            </h2>
+
+            <p class="admin-description">
+                Maintenance Request Management System
+            </p>
+
+            <form id="adminLoginForm">
+
+                <div class="admin-input-group">
+                    <label for="adminUsername">
+                        Admin Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="adminUsername"
+                        placeholder="Enter admin username"
+                        required
+                    >
+                </div>
+
+                <div class="admin-input-group">
+                    <label for="adminPassword">
+                        Admin Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="adminPassword"
+                        placeholder="Enter admin password"
+                        required
+                    >
+                </div>
+
+                <button
+                    type="submit"
+                    class="admin-login-btn">
+                    Admin Login
+                </button>
+
+                <p id="adminLoginMessage"></p>
+
+            </form>
+
+            <a href="login.html" class="admin-back-login">
+                ← Back to User Login
+            </a>
+
+            <footer class="admin-footer">
+                Asian Institute of Technology and Education
+            </footer>
+
+        </div>
+
+    </div>
+
+    <script src="admin-login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AITE Student Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="icon" type="image/x-icon" href="LOLOGO.png">
+</head>
+
+<body>
+
+<div class="signup-page">
+
+    <div class="signup-box">
+
+        <div class="signup-logo">
+            <img src="LOLOGO.png" alt="AITE Logo">
+        </div>
+
+        <h1>AITE</h1>
+
+        <h2>Student Sign Up</h2>
+
+        <p class="signup-description">
+            Create your AITE Maintenance System account
+        </p>
+
+        <form id="signupForm">
+
+            <div class="signup-input-group">
+                <label for="signupName">Full Name</label>
+
+                <input
+                    type="text"
+                    id="signupName"
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+            <div class="signup-input-group">
+                <label for="signupUsername">Username</label>
+
+                <input
+                    type="text"
+                    id="signupUsername"
+                    placeholder="Create a username"
+                    required
+                >
+            </div>
+
+            <div class="signup-input-group">
+                <label for="signupPassword">Password</label>
+
+                <input
+                    type="password"
+                    id="signupPassword"
+                    placeholder="Create a password"
+                    required
+                >
+            </div>
+
+            <div class="signup-input-group">
+                <label for="signupConfirmPassword">
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="signupConfirmPassword"
+                    placeholder="Confirm your password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="signup-btn">
+                Create Account
+            </button>
+
+            <p id="signupMessage"></p>
+
+        </form>
+
+        <a href="login.html" class="back-login">
+            ← Back to Login
+     <a     href="admin.html" class="gotoadmin">
+             Admin Login →
+
+        </a>
+
+
+        <footer>
+            Asian Institute of Technology and Education
+        </footer>
+
+    </div>
+
+</div>
+
+<script src="signup.js"></script>
+
+</body>
+</html>

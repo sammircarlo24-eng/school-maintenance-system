@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+ <meta charset="UTF-8">
+
+ <meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AITE Maintenance Request System</title>
+
+    <link rel="stylesheet" href="schoolmaintenance.css">
+    <link rel="icon" type="image/x-icon" href="LOLOGO.png">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <a href="#home">
+            <img src="LOLOGO.png" alt="AITE Logo">
+        </a>
+
+        <div class="logo-text">
+
+            
+
+            <span>
+                Maintenance Request System
+            </span>
+
+        </div>
+
+    </div>
+
+    <nav>
+
+        <a href="#home">Dashboard</a>
+
+        <a href="#request">
+            Submit Report
+        </a>
+
+        <a href="#requests">
+            Manage Reports
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+        <button
+            class="logout-btn"
+            onclick="logout()"
+        >
+            Logout
+        </button>
+
+    </nav>
+
+</header>
+
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <div class="system-label">
+            AITE MAINTENANCE SYSTEM
+        </div>
+
+        <h2>
+            School Maintenance Request Management
+        </h2>
+
+        <p>
+            Submit, monitor, and manage school facility
+            maintenance reports through one centralized system.
+        </p>
+
+        <a
+            href="#request"
+            class="hero-btn"
+        >
+            Submit Maintenance Report
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="dashboard">
+
+    <div class="dashboard-card">
+
+        <div class="dashboard-icon">
+            
+        </div>
+
+        <h3 id="totalRequests">
+            0
+        </h3>
+
+        <p>
+            Total Requests
+        </p>
+
+    </div>
+
+
+    <div class="dashboard-card">
+
+        <div class="dashboard-icon">
+            
+        </div>
+
+        <h3 id="pendingRequests">
+            0
+        </h3>
+
+        <p>
+            Pending
+        </p>
+
+    </div>
+
+
+    <div class="dashboard-card">
+
+        <div class="dashboard-icon">
+            
+        </div>
+
+        <h3 id="progressRequests">
+            0
+        </h3>
+
+        <p>
+            In Progress
+        </p>
+
+    </div>
+
+
+    <div class="dashboard-card">
+
+        <div class="dashboard-icon">
+            
+        </div>
+
+        <h3 id="resolvedRequests">
+            0
+        </h3>
+
+        <p>
+            Resolved
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="request" class="section">
+
+    <div class="section-title">
+
+        <span class="section-label">
+            REPORT FACILITY PROBLEM
+        </span>
+
+        <h2>
+            Submit Maintenance Report
+        </h2>
+
+        <p>
+            Provide the details of the facility problem
+            that needs attention.
+        </p>
+
+    </div>
+
+
+    <div class="form-container">
+
+        <form id="maintenanceForm">
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="role">
+                        User Type
+                    </label>
+
+                    <select id="role" required>
+
+                        <option value="">
+                            Select User Type
+                        </option>
+
+                        <option>
+                            Student
+                        </option>
+
+                        <option>
+                            Teacher
+                        </option>
+
+                        
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="location">
+                        Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        placeholder="Example: Room 204"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="category">
+                        Category
+                    </label>
+
+                    <select
+                        id="category"
+                        required
+                    >
+
+                        <option value="">
+         Select Category
+                        </option>
+
+                        <option>
+                            Electrical
+                        </option>
+
+                        <option>
+                            Plumbing
+                        </option>
+
+                        <option>
+                            Doors
+                        </option>
+
+                        <option>
+                            Tables
+                        </option>
+
+                        <option>
+                            Chairs
+                        </option>
+
+                        <option>
+                            Building Damage
+                        </option>
+
+                        <option>
+                            Others
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="description">
+                    Maintenance Concern
+                </label>
+
+                <textarea
+                    id="description"
+                    rows="6"
+                    placeholder="Describe the problem..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="photo">
+                    Optional Photo
+                </label>
+
+                <input
+                    type="file"
+                    id="photo"
+                    accept="image/*"
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="submit-btn"
+            >
+                Submit Maintenance Report
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<section
+    id="requests"
+    class="section requests-section"
+>
+
+    <div class="section-title">
+
+        <span class="section-label">
+            REQUEST MANAGEMENT
+        </span>
+
+        <h2>
+            Maintenance Reports
+        </h2>
+
+        <p>
+            Search, filter, and update submitted maintenance reports.
+        </p>
+
+    </div>
+
+
+    <div class="request-controls">
+
+        <input
+            type="text"
+            id="searchRequest"
+            placeholder="Search reports..."
+        >
+
+
+        <select id="statusFilter">
+
+            <option value="All">
+                All Status
+            </option>
+
+            <option value="Pending">
+                Pending
+            </option>
+
+            <option value="In Progress">
+                In Progress
+            </option>
+
+            <option value="Resolved">
+                Resolved
+            </option>
+
+        </select>
+
+
+        <select id="categoryFilter">
+
+            <option value="All">
+                All Categories
+            </option>
+
+            <option value="Electrical">
+                Electrical
+            </option>
+
+            <option value="Plumbing">
+                Plumbing
+            </option>
+
+            <option value="Doors">
+               Doors
+            </option>
+
+            <option value="Cleaning">
+                Tables
+            </option>
+
+            <option value="Chairs">
+                Chairs
+            </option>
+
+            <option value="Building Damage">
+                Building Damage
+            </option>
+
+            <option value="Others">
+                Others
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div
+        id="requestList"
+        class="request-list"
+    ></div>
+
+</section>
+
+
+<section
+    id="about"
+    class="about-section"
+>
+
+    <div class="section-title">
+
+        <span class="section-label">
+            SYSTEM INFORMATION
+        </span>
+
+        <h2>
+            About the System
+        </h2>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-card">
+
+            <div class="about-icon">
+                
+            </div>
+
+            <h3>
+                Report
+            </h3>
+
+            <p>
+                Students and teachers can submit
+                maintenance concerns with complete
+                facility information.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <div class="about-icon">
+                
+            </div>
+
+            <h3>
+                Track
+            </h3>
+
+            <p>
+                Users can monitor maintenance reports
+                and check their current status.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <div class="about-icon">
+                
+            </div>
+
+            <h3>
+                Resolve
+            </h3>
+
+            <p>
+                Maintenance personnel can update
+                reports and mark completed requests.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h3>
+        AITE Maintenance Request System
+    </h3>
+
+    <p>
+        Asian Institute of Technology and Education
+    </p>
+
+    <p>
+        ICT | TECHPRO Grade 12
+    </p>
+
+    <p>
+        © 2026 AITE
+    </p>
+
+</footer>
+
+
+<script src="schoolmaintenance.js"></script>
+
+</body>
+
+</html>

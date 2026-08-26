@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AITE Maintenance System - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/x-icon" href="LOLOGO.png">
+</head>
+
+<body>
+
+<div class="login-page">
+
+    <div class="login-box">
+
+        <div class="login-logo">
+            <img src="LOLOGO.png" alt="AITE Logo">
+        </div>
+
+        <h1>AITE</h1>
+
+        <h2>Maintenance Request System</h2>
+
+        <p class="login-description">
+            School Facility Maintenance Management
+        </p>
+
+        <form id="loginForm">
+
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter username"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+           <a href="sign.html" class="signup-link">
+    Create Student Account
+</a>
+            <p id="loginMessage"></p>
+
+        </form>
+
+        <a href="admin.html" class="gotoadmin">
+    Admin Login →
+</a>
+
+        <footer>
+            Asian Institute of Technology and Education
+        </footer>
+
+    </div>
+
+</div>
+
+<script src="login.js"></script>
+
+</body>
+</html>
